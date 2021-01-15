@@ -1,0 +1,22 @@
+.button.inactive {
+    background-color: gray;
+}
+.button.inactive:hover {
+    cursor: default;
+}
+
+.button {
+    padding: 10px 20px 10px 20px;
+    margin-left: 20px;
+    background-color: #008060;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: all .2s ease-in-out;
+}
+
+.active.button:hover {
+    background-color:#005c45;
+    cursor: pointer;
+}
