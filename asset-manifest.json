@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Shopify-FrontEnd-Challenge/movie4etpnrs/static/css/main.44cd3fab.chunk.css",
+    "main.js": "/Shopify-FrontEnd-Challenge/movie4etpnrs/static/js/main.1eb15872.chunk.js",
+    "main.js.map": "/Shopify-FrontEnd-Challenge/movie4etpnrs/static/js/main.1eb15872.chunk.js.map",
+    "runtime-main.js": "/Shopify-FrontEnd-Challenge/movie4etpnrs/static/js/runtime-main.7e67cd99.js",
+    "runtime-main.js.map": "/Shopify-FrontEnd-Challenge/movie4etpnrs/static/js/runtime-main.7e67cd99.js.map",
+    "static/js/2.befefb16.chunk.js": "/Shopify-FrontEnd-Challenge/movie4etpnrs/static/js/2.befefb16.chunk.js",
+    "static/js/2.befefb16.chunk.js.map": "/Shopify-FrontEnd-Challenge/movie4etpnrs/static/js/2.befefb16.chunk.js.map",
+    "static/js/3.c1711df4.chunk.js": "/Shopify-FrontEnd-Challenge/movie4etpnrs/static/js/3.c1711df4.chunk.js",
+    "static/js/3.c1711df4.chunk.js.map": "/Shopify-FrontEnd-Challenge/movie4etpnrs/static/js/3.c1711df4.chunk.js.map",
+    "index.html": "/Shopify-FrontEnd-Challenge/movie4etpnrs/index.html",
+    "static/css/main.44cd3fab.chunk.css.map": "/Shopify-FrontEnd-Challenge/movie4etpnrs/static/css/main.44cd3fab.chunk.css.map",
+    "static/js/2.befefb16.chunk.js.LICENSE.txt": "/Shopify-FrontEnd-Challenge/movie4etpnrs/static/js/2.befefb16.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7e67cd99.js",
+    "static/js/2.befefb16.chunk.js",
+    "static/css/main.44cd3fab.chunk.css",
+    "static/js/main.1eb15872.chunk.js"
+  ]
+}
