@@ -1,0 +1,201 @@
+.page-container {
+    background-color: #fbf7ed;
+    position: relative;
+    min-height: 100%;
+    min-width: 1100px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .search-nominee-results {
+        margin: 0 auto;
+        position: relative;
+        width: 100%;
+        max-width: 1250px;
+        min-width: 400px;
+        text-align: center;
+    }
+        .search-result {
+            width: 40%;
+            top: 0;
+            float: left;
+            margin: 0 40px;
+        }
+        .nominee-result {
+            width: 40%;
+            top: 0;
+            float: right;
+            margin: 0 40px;
+        }
+
+    .nominee-container {
+        padding: 0px 20px 0 20px;
+        border-radius: 8px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        background-color: white;
+    }
+
+        .nominee {
+            padding-bottom: 10px;
+        }
+
+        .nominee-header {
+            font-weight: 500;
+        }  
+
+    .header-container {
+        padding: 20px 0;
+    }
+
+        .header {
+            padding: 16px;
+            color: #004c3f;
+            font-weight: 800;
+        }
+
+        #shoppies1 {
+            font-size: 36px;
+            font-style: italic;
+        }
+
+        #shoppies2 {
+            font-size: 50px;
+            font-family: 'Luckiest Guy', cursive;
+        }
+
+        .note {
+            padding: 16px;
+            font-size: 20px;
+            color: #42474c;
+        }
+
+    .result-container {
+        padding: 0px 20px 0 20px;
+        border-radius: 8px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        background-color: white;
+    }
+
+        .result {
+            padding-bottom: 10px;
+        }
+        
+            .row-header {
+                position: relative;
+                padding: 0 20px 20px 20px;
+                margin: 10px;
+            }
+
+            .result-row {
+                margin: 10px;
+                padding: 10px;
+                display: flex;
+                flex-direction: row;
+            }
+            .result-row:hover {
+                background-color: #e6ede7;
+                border-radius: 8px;
+            }
+
+                .result-header {
+                    display: inline-block;
+                    font-weight: 500;
+                    word-wrap: break-word;
+                }
+
+                .result-title {
+                    width: 60%;
+                    text-align: left;
+                }
+
+                .result-year {
+                    width: 50%;
+                }
+
+                .left {
+                    float: left;
+                }
+
+                .right {
+                    float: right;
+                }
+
+                .result-header.middle {
+                    position: relative;
+                    right: -20px;
+                }
+                .result-header.middleRight {
+                    position: relative;
+                    right: -28px;
+                }
+
+                .result-header.right {
+                    position: relative;
+                    left: -23px;
+                }
+
+                .msg.red {
+                    color: red;
+                    font-style: italic;
+                    padding-bottom: 20px;
+                }
+
+    .search-container {
+        margin: 0 auto;
+        width: 700px;
+        padding: 10px 20px 10px 20px;
+        border-radius: 8px;
+    }
+        .label-container {
+            margin: 0 auto;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+            .title {
+                text-align: left;
+                padding: 10px 10px 10px 25px;
+                font-style: italic;
+                color: #42474c;
+            }
+
+            .search-label i {
+                position: absolute;
+            }
+
+            .icon {
+                padding: 12px;
+                min-width: 20px;
+                text-align: center;
+                color: #008060;
+            }
+
+            .search-label input {
+                width: 70%;
+                text-align: left;
+                padding: 10px 10px 10px 40px;
+                margin-bottom: 2px;
+                font-size: 16px;
+            }
+
+        .button {
+            padding: 10px 20px 10px 20px;
+            margin-left: 20px;
+            background-color: #008060;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            transition: all .2s ease-in-out;
+        }
+
+        .button:hover {
+            background-color:#005c45;
+            cursor: pointer;
+        }
