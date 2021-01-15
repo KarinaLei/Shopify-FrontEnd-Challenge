@@ -194,7 +194,7 @@ class Search extends React.Component {
             lastQuery: query
         });
         if ( query.length ) {
-            const searchURL = `https://www.omdbapi.com/?apikey=7353c7c5&s=${ query }`;
+            const searchURL = `http://www.omdbapi.com/?apikey=7353c7c5&s=${ query }`;
             axios.get( searchURL )
                 .then( res => {
                     if ( res.data.Search ) {
