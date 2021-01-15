@@ -86,8 +86,6 @@ class Search extends React.Component {
                                 <span className="result-header middleRight">Year of Released</span>
                                 <span className="result-header right">Action</span>
                     </div>
-                    <div className="nominee">
-                    </div>
                 </div>
             )
         }
