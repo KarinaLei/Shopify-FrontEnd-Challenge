@@ -51,7 +51,7 @@ class Search extends React.Component {
             return (
                 <div className="nominee-container">
                     <div className="header-container nominee-header">
-                        <h1>Nominees</h1>
+                        <h1> { nominees.size } Nominees</h1>
                     </div>
                     <div key="row-header" className="row-header">
                         <span className="result-header left">Title</span>
@@ -104,7 +104,7 @@ class Search extends React.Component {
                     </div>
                     <div className="top pagination">
                         <button className={ this.state.page === 1 ? "inactive page-button" : "active page-button" } disabled={ this.state.page === 1 } onClick={ this.previousPage }> Previous </button>
-                        <button className={ this.state.page * 10 >= this.state.totalResults ? "inactive page-button" : "active page-button"} onClick={ this.nextPage }> Next </button>
+                        <button className={ this.state.page * 10 >= this.state.totalResults ? "inactive page-button" : "active page-button"} disabled={ this.state.page * 10 >= this.state.totalResults } onClick={ this.nextPage }> Next </button>
                     </div>
                     <div className="result">
                         <div key="row-header" className="row-header">
