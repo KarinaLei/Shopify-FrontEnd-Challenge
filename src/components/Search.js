@@ -13,7 +13,9 @@ class Search extends React.Component {
         this.state = {
             query: '',
             lastQuery: '',
+            page: 1,
             results: {},
+            totalResults: 0,
             message: '',
             nominees: new Map()
         }
@@ -100,6 +102,10 @@ class Search extends React.Component {
                     <div className="header-container result-header">
                         <h1 className="msg">{ results.length } results for "{ lastQuery }"</h1>
                     </div>
+                    <div className="top pagination">
+                        <button className={ this.state.page === 1 ? "inactive page-button" : "active page-button" } disabled={ this.state.page === 1 } onClick={ this.previousPage }> Previous </button>
+                        <button className={ this.state.page * 10 >= this.state.totalResults ? "inactive page-button" : "active page-button"} onClick={ this.nextPage }> Next </button>
+                    </div>
                     <div className="result">
                         <div key="row-header" className="row-header">
                             <span className="result-header left">Title</span>
@@ -112,16 +118,21 @@ class Search extends React.Component {
                                 <div key={ result.imdbID } className="result-row">
                                     <span className="result-title left">{ result.Title }</span>
                                     <span className="result-year middle">{ result.Year }</span>
-                                    <NominateBut
+                                    <span className="result-button right"><NominateBut
                                                 action = { this.toggleSearch } 
                                                 nominees = { this.state.nominees }
                                                 imdbID = { result.imdbID } 
                                                 title = { result.Title }
                                                 yor = { result.Year }
                                                 active={ this.state.nominees.has(result.imdbID) ? false : true }/>
+                                    </span>
                                 </div>
                             )
                         })}
+                    </div>
+                    <div className="bottom pagination">
+                        <button className={ this.state.page === 1 ? "inactive page-button" : "active page-button" } disabled={ this.state.page === 1 } onClick={ this.previousPage }> Previous </button>
+                        <button className={ this.state.page * 10 >= this.state.totalResults ? "inactive page-button" : "active page-button"} disabled={ this.state.page * 10 >= this.state.totalResults } onClick={ this.nextPage }> Next </button>
                     </div>
                 </div>
             )
@@ -159,6 +170,21 @@ class Search extends React.Component {
         }
     }
 
+    nextPage = ( event ) => {
+        const { page } = this.state; 
+        this.setState({ page: page + 1 }, () => {
+            this.fetchSearchResult()
+        })
+    } 
+
+    previousPage = ( event ) => {
+        console.warn(this.state.totalResults)
+        const { page } = this.state; 
+        this.setState({ page: page - 1 }, () => {
+            this.fetchSearchResult()
+        })
+    }
+
     toggleSearch = ( imdbID, title, yor ) => {
         if ( this.state.nominees.has(imdbID) ) {
             this.state.nominees.delete(imdbID);
@@ -188,22 +214,25 @@ class Search extends React.Component {
 
     fetchSearchResult = (  ) => {
         const query = this.state.query;
+        let page = this.state.page;
         this.setState( {
             lastQuery: query
         });
         if ( query.length ) {
-            const searchURL = `https://www.omdbapi.com/?apikey=7353c7c5&s=${ query }`;
+            const searchURL = `https://www.omdbapi.com/?apikey=7353c7c5&s=${ query }&page=${ page }`;
             axios.get( searchURL )
                 .then( res => {
                     if ( res.data.Search ) {
                         this.setState( {
                             results: res.data.Search,
+                            totalResults: res.data.totalResults,
                             message: ''
                         });
                     }
                     else {
                         this.setState( {
                             results: {},
+                            totalResults: 0,
                             message: 'Movie not found.'
                         });
                     }
@@ -212,6 +241,7 @@ class Search extends React.Component {
                     if ( error ) {
                         this.setState( {
                             results: {},
+                            totalResults: 0,
                             message: 'Failed to fetch data. Check your network connection.'
                         });
                     } 
@@ -220,6 +250,7 @@ class Search extends React.Component {
         else {
             this.setState( {
                 results: {},
+                totalResults: 0,
                 message: 'Movie name cannot be empty.'
             });
         }
@@ -229,7 +260,8 @@ class Search extends React.Component {
         const query = event.target.value;
         this.setState({
             query: query,
-            message: ''
+            message: '',
+            page: 1
         });
     }
 

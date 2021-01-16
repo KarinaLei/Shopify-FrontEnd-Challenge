@@ -71,6 +71,25 @@
             color: #42474c;
         }
 
+    .top.pagination {
+        padding: 10px 20px 20px 20px;
+    }
+
+    .bottom.pagination {
+        padding: 0 20px 30px 20px;
+    }
+
+        .page-button {
+            margin: 0 10px 0 10px;
+            border: none;
+            background-color: transparent;
+            font-size: 14px;
+        }
+        .active.page-button:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
     .result-container {
         padding: 0px 20px 0 20px;
         border-radius: 8px;
@@ -111,10 +130,17 @@
                 .result-title {
                     width: 60%;
                     text-align: left;
+                    margin: auto 0;
                 }
 
                 .result-year {
                     width: 50%;
+                    margin: auto 0;
+                }
+
+                .result-button {
+                    width: 50%;
+                    margin: auto 0;
                 }
 
                 .left {

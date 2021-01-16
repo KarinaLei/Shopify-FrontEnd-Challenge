@@ -1,6 +1,8 @@
 # Navigating The Shoppies
 Type in a movie title and hit 'Search'. Toggle 'Nominate' to nominate or de-nominate. A banner will show at the top to notify the user that the limit of 5 movies has been reached.
+
 Designed and built with ReactJS
+
 Karina Lei, 2021.
 
 # Getting Started with Create React App
