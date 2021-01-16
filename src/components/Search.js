@@ -100,7 +100,7 @@ class Search extends React.Component {
             return (
                 <div className="result-container">
                     <div className="header-container result-header">
-                        <h1 className="msg">{ results.length } results for "{ lastQuery }"</h1>
+                        <h1 className="msg">{ this.state.totalResults } results for "{ lastQuery }"</h1>
                     </div>
                     <div className="top pagination">
                         <button className={ this.state.page === 1 ? "inactive page-button" : "active page-button" } disabled={ this.state.page === 1 } onClick={ this.previousPage }> Previous </button>
