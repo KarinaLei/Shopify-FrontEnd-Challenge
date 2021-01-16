@@ -1,4 +1,6 @@
 # Navigating The Shoppies
+Note: OMDB API's key has been included in the code for demonstrating purposes only.
+
 Type in a movie title and hit 'Search'. Toggle 'Nominate' to nominate or de-nominate. A banner will show at the top to notify the user that the limit of 5 movies has been reached.
 
 Designed and built with ReactJS
