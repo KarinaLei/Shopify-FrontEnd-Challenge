@@ -215,13 +215,14 @@ class Search extends React.Component {
     }
 
     fetchSearchResult = (  ) => {
+        const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
         const query = this.state.query;
         let page = this.state.page;
         this.setState( {
             lastQuery: query
         });
         if ( query.length ) {
-            const searchURL = `https://www.omdbapi.com/?apikey=7353c7c5&s=${ query }&page=${ page }`;
+            const searchURL = `https://www.omdbapi.com/?apikey=${ API_KEY }&s=${ query }&page=${ page }`;
             axios.get( searchURL )
                 .then( res => {
                     if ( res.data.Search ) {
